@@ -31,6 +31,7 @@ public class Commande {
 	}
 
 	public static void afficherListeDeCommandes() {
+		Programme.print("Voici la liste des commandes");
 		for (Commande com : Commande.listeDeCommandes) {
 			Programme.print(com.toString());
 		}

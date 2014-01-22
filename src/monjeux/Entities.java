@@ -1,7 +1,7 @@
 package monjeux;
 
 public abstract class Entities {
-	private String nom;
+	protected String nom;
 	protected int pv;
 
 	public Entities(final String nom) {

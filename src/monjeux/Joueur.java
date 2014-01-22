@@ -6,6 +6,10 @@ public class Joueur extends Entities {
 		super(nom);
 	}
 
+	public Joueur() {
+		super("");
+	}
+
 	@Override
 	public String toString() {
 		return "Joueur: " + super.affichageStd();
@@ -19,6 +23,12 @@ public class Joueur extends Entities {
 	public void attaque(final Monstre unMonstre) {
 		Programme.print("Coup de pied");
 		unMonstre.perd(3);
+
+	}
+
+	public void quelEstTonNom() {
+		Programme.print("Quel est ton nom?");
+		super.nom = Programme.in.nextLine();
 
 	}
 }
