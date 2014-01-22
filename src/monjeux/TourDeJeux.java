@@ -26,10 +26,6 @@ public class TourDeJeux {
 	}
 
 	public boolean isPartieFinie() {
-		if (this.niveau.getMonstre().estMort()) {
-			Programme.print("Winner!");
-			return true;
-		}
 		if (this.niveau.getJoueur().estMort()) {
 			Programme.print("Looser!");
 			return true;

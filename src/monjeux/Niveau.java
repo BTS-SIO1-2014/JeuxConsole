@@ -7,7 +7,7 @@ public class Niveau {
 	private Monstre monstre;
 
 	public Niveau(final String string) {
-		this.titre = string;
+		setTitre(string);
 	}
 
 	public void setJoueur(final Joueur joueur) {
@@ -21,7 +21,7 @@ public class Niveau {
 	}
 
 	public void afficherNiveau() {
-		Programme.print(this.titre);
+		Programme.print(getTitre());
 		Programme.print(getMonstre().affichageStd());
 		Programme.print(getJoueur().affichageStd());
 
@@ -33,6 +33,22 @@ public class Niveau {
 
 	public Monstre getMonstre() {
 		return this.monstre;
+	}
+
+	public String getTitre() {
+		return this.titre;
+	}
+
+	public void setTitre(final String titre) {
+		this.titre = titre;
+	}
+
+	public void niveauSuivant() {
+		if (getMonstre().estMort()) {
+			setTitre("Les enfers!!!");
+			setMonstre(new Monstre("Tortue Infernale!"));
+			afficherNiveau();
+		}
 	}
 
 }

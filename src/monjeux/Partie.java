@@ -21,9 +21,9 @@ public class Partie {
 		this.tour = new TourDeJeux();
 		this.tour.setNiveau(this.niveau);
 
-		this.tour.resolution();
 		while (!this.tour.isPartieFinie()) {
 			this.tour.resolution();
+			this.niveau.niveauSuivant();
 		}
 
 		Programme.print("Fin de la partie");
